@@ -14,3 +14,11 @@ remote_file src_filepath do
   source "http://ktwiki.kewill.com/files/#{src_filename}"
   action :create_if_missing
 end
+
+# create a tpo admin user
+
+# update the box
+execute "yum-update" do
+  command "yum update -y"
+  action :run
+end
